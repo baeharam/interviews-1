@@ -5,135 +5,99 @@
 > solutions to the following interview problems with detailed explanations can be found [here](https://www.youtube.com/channel/UCKvwPt6BifPP54yzH99ff1g).
 <a href="https://www.youtube.com/channel/UCKvwPt6BifPP54yzH99ff1g" style="display:block;"><img src="/images/youtube.jpg?raw=true"></a>
 >
-> Maintainer - [Kevin Naughton Jr.](https://github.com/kdn251)
+> Maintainer - [Kevin Naughton Jr../README-zh-cn.md)
 
-## Translations
+## 목차
+- [온라인 저지](#online-judges)
+- [자료 구조](#data-structures)
+- [알고리즘](#algorithms)
+- [그리디 알고리즘](#greedy-algorithms)
+- [비트마스크](#bitmasks)
+- [런타임 분석](#runtime-analysis)
+- [비디오 강의](#video-lectures)
+- [디렉토리 구조](#directory-tree)
 
-- [简体中文](./README-zh-cn.md)
-
-## Table of Contents
-- [YouTube](#youtube)
-- [Instagram](#instagram)
-- [Articles](#articles)
-- [Online Judges](#online-judges)
-- [Live Coding Practice](#live-coding-practice)
-- [Data Structures](#data-structures)
-- [Algorithms](#algorithms)
-- [Greedy Algorithms](#greedy-algorithms)
-- [Bitmasks](#bitmasks)
-- [Runtime Analysis](#runtime-analysis)
-- [Video Lectures](#video-lectures)
-- [Interview Books](#interview-books)
-- [Computer Science News](#computer-science-news)
-- [Directory Tree](#directory-tree)
-
-## YouTube
-* [Kevin Naughton Jr.](https://www.youtube.com/channel/UCKvwPt6BifPP54yzH99ff1g)
-
-## Instagram 
-* [Programeme](https://www.instagram.com/programeme/)
-
-## Articles
-* [Starting Work](https://medium.com/@Naughton/starting-work-b06e10f6007e)
-
-## Online Judges
-* [LeetCode](https://leetcode.com/)
-* [Virtual Judge](https://vjudge.net/)
-* [CareerCup](https://www.careercup.com/)
-* [HackerRank](https://www.hackerrank.com/)
-* [CodeFights](https://codefights.com/)
-* [Kattis](https://open.kattis.com/)
-* [HackerEarth](https://www.hackerearth.com)
+## 온라인 저지
+* [백준 온라인저지](https://www.acmicpc.net)
 * [Codility](https://codility.com/programmers/lessons/1-iterations/)
 * [Code Forces](http://codeforces.com/)
 * [Code Chef](https://www.codechef.com/)
 * [Sphere Online Judge - SPOJ](http://www.spoj.com/)
-* [InterviewBit](https://www.interviewbit.com/)
 
-## Live Coding Practice
-* [Pramp](https://www.pramp.com/ref/gt4)
-* [Gainlo](http://www.gainlo.co/#!/)
-* [Refdash](https://refdash.com/)
-* [Interviewing.io](https://www.interviewing.io/)
+## 자료구조
+### 연결리스트(Linked List)
+ * *연결리스트*는 노드라는 데이터 원소들로 이루어진 선형 컬렉션이며 각각의 노드는 포인터를 사용해서 다음 노드를 가리키고 있습니다. 노드들이 그룹을 이루는 자료구조이며 일련의 순서들을 표현합니다.
+ * **단방향 연결리스트**: 각각의 노드가 다음 노드를 가리키며 마지막 노드는 `null`을 가리키는 연결리스트
+ * **양방향 연결리스트**: 각각의 노드는 2개의 포인터 `p`와 `n`을 가지며 `p`는 이전노드를 가리키고 `n`은 다음 노드를 가리킵니다. 마지막 노드의 포인터 `n`은 `null`을 가리킵니다.
+ * **순환 연결리스트**: 각각의 노드가 다음 노드를 가리키며 마지막 노드는 첫번째 노드를 가리킵니다.
+ * **시간복잡도**:
+   * 접근: `O(n)`
+   * 탐색: `O(n)`
+   * 삽입: `O(1)`
+   * 삭제: `O(1)`
+* [연결리스트 문제를 풀어보자](https://www.acmicpc.net/problem/tag/%EB%A7%81%ED%81%AC%EB%93%9C%20%EB%A6%AC%EC%8A%A4%ED%8A%B8)
+* [생활코딩 공동공부: 연결리스트](https://opentutorials.org/module/1335/8821)
 
-## Data Structures
-### Linked List
- * A *Linked List* is a linear collection of data elements, called nodes, each
-   pointing to the next node by means of a pointer. It is a data structure
-   consisting of a group of nodes which together represent a sequence.
- * **Singly-linked list**: linked list in which each node points to the next node and the last node points to null
- * **Doubly-linked list**: linked list in which each node has two pointers, p and n, such that p points to the previous node and n points to the next node; the last node's n pointer points to null
- * **Circular-linked list**: linked list in which each node points to the next node and the last node points back to the first node
- * Time Complexity:
-   * Access: `O(n)`
-   * Search: `O(n)`
-   * Insert: `O(1)`
-   * Remove: `O(1)`
+### 스택(Stack)
+ * *스택*은 원소들의 컬렉션이며, 원소를 추가하는 *push* 기능과 가장 최근 원소를 제거하는 *pop* 기능을 가집니다.
+ * 가장 나중에 들어간 원소가 가장 먼저 나오기 때문에 **LIFO(Last In, First Out) 자료구조**입니다.
+ * **시간복잡도**:
+   * 접근: `O(n)`
+   * 탐색: `O(n)`
+   * 삽입: `O(1)`
+   * 삭제: `O(1)`
+* [스택 문제를 풀어보자](https://www.acmicpc.net/problem/tag/%EC%8A%A4%ED%83%9D)
 
-### Stack
- * A *Stack* is a collection of elements, with two principle operations: *push*, which adds to the collection, and
-   *pop*, which removes the most recently added element
- * **Last in, first out data structure (LIFO)**: the most recently added object is the first to be removed
- * Time Complexity:
-   * Access: `O(n)`
-   * Search: `O(n)`
-   * Insert: `O(1)`
-   * Remove: `O(1)`
+### 큐(Queue)
+ * *큐*는 원소들의 컬렉션이며, 원소를 추가하는 *enqueue* 기능과 가장 오래된 원소를 제거하는 *dequeue* 기능을 가집니다.
+ * 가장 처음에 들어간 원소가 가장 먼저 나오기 때문에 **FIFIO(First In, First Out) 자료구조**입니다.
+ * **시간복잡도**:
+   * 접근: `O(n)`
+   * 탐색: `O(n)`
+   * 삽입: `O(1)`
+   * 삭제: `O(1)`
+* [큐 문제를 풀어보자](https://www.acmicpc.net/problem/tag/%ED%81%90)
 
-### Queue
- * A *Queue* is a collection of elements, supporting two principle operations: *enqueue*, which inserts an element
-   into the queue, and *dequeue*, which removes an element from the queue
- * **First in, first out data structure (FIFO)**: the oldest added object is the first to be removed
- * Time Complexity:
-   * Access: `O(n)`
-   * Search: `O(n)`
-   * Insert: `O(1)`
-   * Remove: `O(1)`
+### 트리(Tree)
+ * *트리*는 방향이 없고, 연결되어있는, 사이클이 없는 그래프입니다.
 
-### Tree
- * A *Tree* is an undirected, connected, acyclic graph
+### 이진 트리(Binary Tree)
+ * *이진 트리*는 각 노드가 *left child*와 *right child*라고 불리는 자식 노드들을 최대 2개 가질 수 있는 트리 자료구조입니다.
+ * **정 이진 트리(Full Tree)**: 모든 노드가 0개 혹은 2개의 자식노드를 가지는 이진 트리입니다.
+ * **포화 이진 트리(Perfect Binary Tree)**: 안쪽 노드들이 전부 2개의 자식노드를 가지며 모든 리프 노드들이 같은 깊이를 가지는 이진 트리입니다.
+ * **완전 이진 트리(Complete Binary Tree)**: 왼쪽 자식노드부터 채워지며 마지막 레벨을 제외하고는 모든 자식노드들이 채워져 있는 이진 트리입니다.
 
-### Binary Tree
- * A *Binary Tree* is a tree data structure in which each node has at most two children, which are referred to as
-   the *left child* and *right child*
- * **Full Tree**: a tree in which every node has either 0 or 2 children
- * **Perfect Binary Tree**: a binary tree in which all interior nodes have two children and all leave have the same depth
- * **Complete Tree**: a binary tree in which every level *except possibly the last* is full and all nodes in the last
-   level are as far left as possible
+### 이진 탐색 트리(Binary Search Tree)
+ * BST라고 불리는 이진 탐색 트리는 각 노드가 왼쪽 부분 트리나 오른쪽 부분 트리에 있는 어떤 값보다 크거나 같아야 한다는 속성을 가지는 이진 트리입니다.
+ * **시간 복잡도**:
+   * 접근: `O(log(n))`
+   * 탐색: `O(log(n))`
+   * 삽입: `O(log(n))`
+   * 삭제: `O(log(n))`
 
-### Binary Search Tree
- * A binary search tree, sometimes called BST, is a type of binary tree which maintains the property that the value in each
-   node must be greater than or equal to any value stored in the left sub-tree, and less than or equal to any value stored
-   in the right sub-tree
- * Time Complexity:
-   * Access: `O(log(n))`
-   * Search: `O(log(n))`
-   * Insert: `O(log(n))`
-   * Remove: `O(log(n))`
+<img src="https://github.com/kdn251/interviews/raw/master/images/BST.png?raw=true" width="300px">
 
-<img src="/images/BST.png?raw=true" alt="Binary Search Tree" width="400" height="500">
+* [이진 탐색 트리 문제를 풀어보자](https://www.acmicpc.net/problem/tag/%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89%20%ED%8A%B8%EB%A6%AC)
 
-### Trie
-* A trie, sometimes called a radix or prefix tree, is a kind of search tree that is used to store a dynamic set or associative
-  array where the keys are usually Strings. No node in the tree stores the key associated with that node; instead, its position 
-  in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the String associated 
-  with that node, and the root is associated with the empty String.
+### 트라이(Trie)
+* 트라이는 기수(radix) 혹은 접두사(prefix) 트리라고도 불리며, 키가 문자열인 연관배열이나 동적인 집합을 저장하는데 사용되는 탐색 트리입니다. 어떤 노드도 그 노드에 연관된 키를 저장하지는 않습니다. 대신, 트리에서의 위치가 해당 노드와 연관된 키를 정의합니다. 노드의 모든 자식들은 그 노드에 연관된 문자열을 접두사로 가지며 루트노드는 빈 문자열을 가집니다.
 
-![Alt text](/images/trie.png?raw=true "Trie")
+<img src="https://github.com/kdn251/interviews/raw/master/images/trie.png?raw=true">
 
-### Fenwick Tree
-* A Fenwick tree, sometimes called a binary indexed tree, is a tree in concept, but in practice is implemented as an implicit data
-  structure using an array. Given an index in the array representing a vertex, the index of a vertex's parent or child is calculated
-  through bitwise operations on the binary representation of its index. Each element of the array contains the pre-calculated sum of
-  a range of values, and by combining that sum with additional ranges encountered during an upward traversal to the root, the prefix
-  sum is calculated
-* Time Complexity:
-  * Range Sum: `O(log(n))`
-  * Update: `O(log(n))`
+* [트라이 문제를 풀어보자](https://www.acmicpc.net/problem/tag/%ED%8A%B8%EB%9D%BC%EC%9D%B4)
 
-![Alt text](/images/fenwickTree.png?raw=true "Fenwick Tree")
+### 펜윅 트리(Fenwick Tree)
+* 펜윅 트리는 이진 인덱스 트리라고도 불리는, 개념적으로는 트리이지만 실제로는 배열을 통한 암시적인 자료 구조로 구현됩니다. 배열에서 정점을 나타내는 인덱스가 주어지면 인덱스를 이진수로 표현한 뒤, 비트 연산을 통해서 정점의 부모나 자식 인덱스가 계산됩니다. 배열의 각 원소들은 미리 계산된 범위의 합을 가지고 있으며 루트노드로 이동하는 중에 만나는 추가적인 범위들을 결합하면 접두사의 합이 계산됩니다.
+* **시간 복잡도**:
+  * 부분합 계산: `O(log(n))`
+  * 갱신: `O(log(n))`
 
-### Segment Tree
+<img src="https://github.com/kdn251/interviews/raw/master/images/fenwickTree.png?raw=true">
+
+* [펜윅 트리에 관한 백준님 설명](https://www.acmicpc.net/blog/view/21)
+* [펜윅 트리 문제를 풀어보자](https://www.acmicpc.net/problem/tag/%ED%8E%9C%EC%9C%85%20%ED%8A%B8%EB%A6%AC)
+
+### 세그먼트 트리(Segment Tree)
 * A Segment tree, is a tree data structure for storing intervals, or segments. It allows querying which of the stored segments contain
   a given point
 * Time Complexity:
@@ -319,11 +283,11 @@ or equal to those of the children and the lowest key is in the root node
 * Extract lowest set bit: `s & (-s);`
 * Extract lowest unset bit: `~s & (s + 1);`
 * Swap Values:
-             ```
-                x ^= y;
-                y ^= x;
-                x ^= y;
-             ```
+     ​    ​    ```
+     ​    ​       x ^= y;
+     ​    ​       y ^= x;
+     ​    ​       x ^= y;
+     ​    ​    ```
 
 ## Runtime Analysis
 
@@ -358,16 +322,6 @@ or equal to those of the children and the lowest key is in the root node
     * [MIT Introduction to Algorithms](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=1)
     * [MIT Advanced Algorithms](https://www.youtube.com/playlist?list=PL6ogFv-ieghdoGKGg2Bik3Gl1glBTEu8c)
     * [UC Berkeley Algorithms](https://archive.org/details/ucberkeley-webcast?&and[]=subject%3A%22Computer%20Science%22&and[]=subject%3A%22CS%22)
-
-## Interview Books
-* [Competitive Programming 3 - Steven Halim & Felix Halim](https://www.amazon.com/Competitive-Programming-3rd-Steven-Halim/dp/B00FG8MNN8) 
-* [Cracking The Coding Interview - Gayle Laakmann McDowell](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?s=books&ie=UTF8)
-* [Cracking The PM Interview - Gayle Laakmann McDowell & Jackie Bavaro](https://www.amazon.com/Cracking-PM-Interview-Product-Technology-ebook/dp/B00ISYMUR6/ref=sr_1_1?s=books&ie=UTF8)
-* [Introduction to Algorithms -  Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest & Clifford Stein](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?ie=UTF8&qid=1490295989&sr=8-1&keywords=Introduction+to+Algorithms)
-
-## Computer Science News
-* [Hacker News](https://news.ycombinator.com/)
-* [Lobsters](https://lobste.rs/)
 
 ## Directory Tree
 
